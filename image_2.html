@@ -1,0 +1,110 @@
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+  <meta name="title" content="대메뉴1 : 국문">
+  <meta name="description" content="국문,대메뉴1">
+  <meta name="keyword" content="국문">
+  <meta name="author" content="국문">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="국문">
+  <meta property="og:site_name" content="국문">
+  <meta property="og:description" content="국문">
+  <title>갤러리 리스트</title>
+  <!-- 공통 CSS -->
+  <link rel="stylesheet" href="css/basic.css">
+  <!-- 서브 CSS -->
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/contents.css">
+  <!-- 공통 JS -->
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <!-- 서브 JS -->
+  <script src="js/sub.js"></script>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li><a href="table.html">테이블 </a></li>          
+                <li><a href="button.html">버튼</a></li>
+                <li class="on"><a href="image.html">이미지</a></li>          
+                <li><a href="form.html">폼</a></li>
+				<li><a href="tab.html">탭</a></li>
+                <li><a href="slick.html">slick</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">이미지</h1>
+                    <div class="more_link_wrap">
+                        <a href="image.html">기본</a>
+                        <a href="image_2.html" class="on">img map</a>
+                    </div>
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+                   
+                    <div class="international_cooperation">
+                        <div>
+                            <img id="mapImg" alt="KFE와 국제협력 세계지도" src="img/contents/a10105020100_1.jpg" usemap="#Map" width="1070" height="589">
+                            <map name="Map" id="Map">
+                                <area shape="circle" coords="812,199,54" data-index="2" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="369,243,31" data-index="3" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="347,119,31" data-index="4" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="467,222,31" data-index="5" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="60,143,30" data-index="6" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="115,168,31" data-index="7" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="116,232,31" data-index="8" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="60,204,31" data-index="9" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="453,457,30" data-index="10" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="355,320,32" data-index="11" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="168,138,31" data-index="12" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="170,200,30" data-index="13" href="javascript:void(0);" alt="" />
+                                <area shape="circle" coords="170,262,31" data-index="14" href="javascript:void(0);" alt="" />
+                            </map>
+                            
+                            <script src="js/jquery.rwdImageMaps.min.js" type="application/javascript"></script>
+                            
+                            <script>
+                            $(function(){
+                                $('img[usemap]').rwdImageMaps();
+                                $("area").on("mouseover focusin", function(evt){
+                                    var target = $(evt.currentTarget);
+                                    $("#mapImg").prop("src", "img/contents/a10105020100_" + target.attr("data-index") + ".jpg");
+                                });
+                                $("area").on("mouseout focusout", function(evt){
+                                    var target = $(evt.currentTarget);
+                                    $("#mapImg").prop("src", "img/contents/a10105020100_1" + ".jpg");
+                                });
+                            });
+                            </script>
+                        </div>
+                    </div>
+
+                    
+                    <!-- // -->
+                </div>
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+
+    </section>
+    <!-- #container -->
+
+    <footer>
+    </footer>
+</div>
+</body>
+</html>

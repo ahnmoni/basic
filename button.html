@@ -1,0 +1,219 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="title" content="대메뉴1 : 국문">
+<meta name="description" content="국문,대메뉴1">
+<meta name="keyword" content="국문">
+<meta name="author" content="국문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국문">
+<meta property="og:site_name" content="국문">
+<meta property="og:description" content="국문">
+<title>게시판 상세보기화면</title>
+<!-- 공통 CSS -->
+<link rel="stylesheet" href="css/basic.css">
+<!-- 서브 CSS -->
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/contents.css">
+<!-- 공통 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- 서브 JS -->
+<script src="js/sub.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li><a href="table.html">테이블 </a></li>          
+                <li class="on"><a href="button.html">버튼</a></li>
+                <li><a href="image.html">이미지</a></li>          
+                <li><a href="form.html">폼</a></li>
+				<li><a href="tab.html">탭</a></li>
+                <li><a href="slick.html">slick</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">버튼</h1>
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+
+                    <a href="#" class="btn_basic">취소</a> 
+                    <a href="#" class="btn_basic type2">확인</a> 
+                    <a href="#" class="btn_basic type3">목록</a> 
+                    <br> <br>
+                    <a href="#" class="btn_basic mid">취소</a> 
+                    <a href="#" class="btn_basic type2 mid">확인</a> 
+                    <a href="#" class="btn_basic type3 mid">목록</a> 
+                    <br> <br>
+                    <a href="#" class="btn_basic small">취소</a> 
+                    <a href="#" class="btn_basic type2 small">확인</a> 
+                    <a href="#" class="btn_basic type3 small">목록</a> 
+
+                    <div class="btn_wrap mb50">
+                        <a href="#" class="btn_basic">취소</a> 
+                        <a href="#" class="btn_basic type2">확인</a> 
+                        <a href="#" class="btn_basic type3">목록</a> 
+                    </div>
+
+                    <a href="#" class="btn_basic lt1 icon_down">다운로드</a> 
+                    <a href="#" class="btn_basic type2 lt1 icon_arrow">바로가기</a> 
+                    <a href="#" class="btn_basic type3 lt1 icon_print">출력하기</a> 
+                    <br> <br>
+
+                    <a href="#" class="btn_basic mid lt2 icon_down">다운로드</a> 
+                    <a href="#" class="btn_basic type2 mid lt2 icon_arrow">바로가기</a> 
+                    <a href="#" class="btn_basic type3 mid lt2 icon_print">출력하기</a> 
+                    <br> <br>
+
+                    <a href="#" class="btn_basic small lt3 icon_down">다운로드</a> 
+                    <a href="#" class="btn_basic type2 small lt3 icon_arrow">바로가기</a> 
+                    <a href="#" class="btn_basic type3 small lt3 icon_print">출력하기</a> 
+                    <br> <br>
+
+                    <h2 class="title2 mt50 mb30">버튼 효과</h2>
+
+                    <a href="#" class="btn_eff1 hvr-sweep-to-right mb20">버튼</a> 
+                    <br>
+                    <a href="#" class="btn_eff2 mb20">
+                        <span class="transition"></span>
+                        <span class="gradient"></span>
+                        <span class="label">버튼</span>
+                    </a> 
+                    <br>
+                    <a href="#" class="btn_eff3 mb20">버튼</a> 
+                    <br>
+                    <a href="#" class="btn_eff4 mb20"><span>Button</span></a> 
+                    <br>
+                    <a href="#" class="btn_eff5 mb20">Button</a><br>  <a href="#" class="btn_eff6 mb20">Button</a> 
+                    <br>
+
+                    <!--<div class="board_view">
+                        <p class="title">2020년 하계 휴가 기간 안내</p>
+                        <ul class="info">
+                            <li><strong>작성자</strong><span>관리자</span></li>
+                            <li><strong>등록일</strong><span>2020.08.08</span></li>
+                            <li><strong>조회수</strong><span>520</span></li>
+                        </ul>
+                        <div class="contents">
+                            안녕하세요. 담당자입니다. <br><br>당 연구원은 하계 집중휴가 기간을 운영하고 있으며,<br> 이에 따라 7월 31일(월) ~ 8월 4일(금)까지 업무 처리가 지연될 수 있습니다. <br><br> 감사합니다.
+                        </div>
+                        <div class="file">
+                            <p class="title">첨부파일</p>
+                            <ul class="list">
+                                <li>
+                                    <img src="./img/board/hwp.png" alt="">
+                                    <a href=""> 첨부파일명.hwp <span class="txt">(234.0KB)</span></a>                
+                                    <span class="link">
+                                        <a href="" class="btn-down">다운로드 <i class="xi-download"></i></a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <img src="./img/board/ppt.png" alt="">
+                                    <a href=""> 첨부파일명.ppt <span class="txt">(234.0KB)</span></a>                
+                                    <span class="link">
+                                        <a href="" class="btn-down">다운로드 <i class="xi-download"></i></a>
+                                    </span>
+                                </li>           
+                            </ul>
+                        </div>
+                    </div>
+                    <article class="comment">
+                        <div class="form">
+                            <form name="cmtForm" method="post" action="">
+                            <fieldset>
+                                <legend class="blind">등록</legend>
+                                <div class="item">
+                                    <span class="length"><span id="opinionLength">0</span> / 200</span>
+                                    <textarea title="댓글 내용" name="c_comment" rows="4" cols="76" placeholder="댓글을 남겨주세요."></textarea>                                        
+                                    <button type="button" class="btn">등록</button>                                            
+                                </div>
+                            </fieldset>
+                            </form>
+                        </div>
+                        
+                        <h2 class="title">총 <span>3건</span>의 댓글</h2>
+                                
+                        <div class="list" id="commentListFirst">
+                            <ul>                        
+                                <li id="cmt2">
+                                    <span class="name">익명</span>                    
+                                    <p id="comment_spread_upt_0" class="txt">댓글등록ㅇㅇㅇㅇㅇ</p>                  
+                                    <span class="date">2020/03/10 10:51</span>
+                                    <br>
+                                    <p class="btn">                                            
+                                        <a href="">수정</a>
+                                        <a href="">삭제</a>                                            
+                                    </p>
+                        
+                                    <div class="form" id="spread_upt_0_box" style="display:none;">
+                                        <form name="cmtUptForm0" method="post" action="">                                                
+                                            <textarea name="c_comment" title="수정 내용">댓글등록ㅇㅇㅇㅇㅇ</textarea>
+                                            <button type="button">저장</button>                                                
+                                        </form>
+                                    </div>
+                                        
+                                    <div class="form" id="spread_0_box" style="display:none;">
+                                        <form name="cmtReForm0" method="post" action="">                                                    
+                                            <textarea name="c_comment" placeholder="답변을 남겨주세요." title="댓글의 답변 내용"></textarea>
+                                            <button type="button">등록</button>
+                                        </form>
+                                    </div>                                            
+                                </li>                                
+                                <li id="cmt4" class="re">
+                                    <span class="name">익명</span>                    
+                                    <p id="comment_spread_upt_1" class="txt">답변이고여</p>                  
+                                    <span class="date">2020/03/10 10:59</span>
+                                    <br>
+                                    <p class="btn">                                            
+                                        <a href="">수정</a>
+                                        <a href="">삭제</a>                                            
+                                    </p>
+                        
+                                    <div class="form" id="spread_upt_1_box" style="display:none;">
+                                        <form name="cmtUptForm1" method="post" action="">                                                    
+                                            <textarea name="c_comment" title="수정 내용">답변이고여</textarea>
+                                            <button type="button" onclick="cmtUpt('0001', '30', '4', document.cmtUptForm1); return false;">저장</button>
+                                        </form>
+                                    </div>
+                                        
+                                </li>                                
+                            </ul>
+                        </div>
+                    </article>
+                    
+                    <div class="board_btns">
+						<p class="txt">* 알림내용</p>
+                        <button type="button" class="btn type1">삭제</button>
+                        <button type="button" class="btn type1">수정</button>
+                        <button type="button" class="btn ">목록</button>  
+                    </div>
+
+                    <ul class="prevnext">
+                        <li class="prev"><span>이전글</span><a href="">이전글 제목입니다.</a></li>          
+                        <li class="next"><span>다음글</span><a href="">다음글 제목입니다.</a></li>          
+                    </ul>-->
+                    <!-- // -->                    
+                </div>
+            
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+    
+    </section>
+    <!-- #container -->
+
+</div>
+</body>
+</html>

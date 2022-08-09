@@ -1,0 +1,207 @@
+<html lang="ko">
+
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="title" content="대메뉴1 : 국문">
+<meta name="description" content="국문,대메뉴1">
+<meta name="keyword" content="국문">
+<meta name="author" content="국문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국문">
+<meta property="og:site_name" content="국문">
+<meta property="og:description" content="국문">
+<title>게시판 리스트</title>
+<!-- 공통 CSS -->
+<link rel="stylesheet" href="css/basic.css">
+<!-- 서브 CSS -->
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/contents.css">
+<!-- 공통 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- 서브 JS -->
+<script src="js/sub.js"></script>
+</head>
+
+<body>
+
+<div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li class="on"><a href="table.html">테이블 </a></li>          
+                <li><a href="button.html">버튼</a></li>
+                <li><a href="image.html">이미지</a></li>          
+                <li><a href="form.html">폼</a></li>
+				<li><a href="tab.html">탭</a></li>
+                <li><a href="slick.html">slick</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">테이블 </h1>
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+                    <div class="table_wrap responsive">
+                        <p class='horizontal_scroll'><i class='xi-arrow-left'></i><i class='xi-touch'></i><i class='xi-arrow-right'></i><span class='txt'>좌, 우로 이동 가능합니다.</span></p>
+                        <table>
+                            <caption>표내용 - 구분</caption>
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:40%">
+                                <col style="width:10%">
+                                <col style="width:40%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">실행기관 </th>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">실행기관 </th>
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td>방문하신 장미광장은 165종 18,500주의 향기로운 장미꽃이 자라고 있는 곳입니다.<br>
+                                        장미보호 및 올바른 관람문화 정착을 위해 다음사항을 준수하여 즐거운 관람이 되시길 바랍니다.</td>
+                                    <td>2  </td>
+                                    <td>방문하신 장미광장은 165종 18,500주의 향기로운 장미꽃이 자라고 있는 곳입니다.<br>
+                                        장미보호 및 올바른 관람문화 정착을 위해 다음사항을 준수하여 즐거운 관람이 되시길 바랍니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>3 </td>
+                                    <td>내용</td>
+                                    <td>4  </td>
+                                    <td>내용</td>
+                                </tr>            
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table_wrap">
+                        <table class="txt_left">
+                            <caption>표내용 - 구분</caption>
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:40%">
+                                <col style="width:10%">
+                                <col style="width:40%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">실행기관 </th>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">실행기관 </th>
+                                </tr>
+                            </thead> 
+                            <tbody>
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td>내용</td>
+                                    <td>2  </td>
+                                    <td>내용</td>
+                                </tr>
+                                <tr>
+                                    <td>3 </td>
+                                    <td>내용</td>
+                                    <td>4  </td>
+                                    <td>내용</td>
+                                </tr>            
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table_wrap">
+                        <table >
+                            <caption>표내용 - 구분</caption>
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:40%">
+                                <col style="width:10%">
+                                <col style="width:40%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">실행기관 </th>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">실행기관 </th>
+                                </tr>
+                            </thead> 
+                            <tbody class="txt_left">
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td>내용</td>
+                                    <td>2  </td>
+                                    <td>내용</td>
+                                </tr>
+                                <tr>
+                                    <td>3 </td>
+                                    <td>내용</td>
+                                    <td>4  </td>
+                                    <td>내용</td>
+                                </tr>            
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="table_wrap">
+                        <table >
+                            <caption>표내용 - 구분</caption>
+                            <colgroup>
+                                <col style="width:10%">
+                                <col style="width:40%">
+                                <col style="width:10%">
+                                <col style="width:40%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">실행기관 </th>
+                                    <th scope="col">연번</th>
+                                    <th scope="col">실행기관 </th>
+                                </tr>
+                            </thead> 
+                            <tbody >
+                                <tr>
+                                    <td><strong>1</strong></td>
+                                    <td >내용</td>
+                                    <td>2  </td>
+                                    <td class="txt_left">내용</td>
+                                </tr>
+                                <tr>
+                                    <td>3 </td>
+                                    <td>내용</td>
+                                    <td>4  </td>
+                                    <td class="txt_left">내용</td>
+                                </tr>            
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- // -->
+                </div>
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+    
+    </section>
+    <!-- #container -->
+
+    <footer>
+    </footer>
+</div>
+
+</body>
+
+</html>

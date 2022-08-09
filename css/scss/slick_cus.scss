@@ -1,0 +1,419 @@
+@charset 'utf-8';
+
+$width1 : 1280; 
+// 가로
+@mixin width($width) {width: $width / 10 +rem; max-width: calc(100% - 6rem); margin-left: auto !important; margin-right: auto !important;}
+
+// 한줄 줄임
+@mixin ellipsis1 {overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+// 두줄 줄임 
+@mixin ellipsis2 {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+// 세줄 줄임 
+@mixin ellipsis3 {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;}
+// 세줄 줄임 
+@mixin ellipsis4 {overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical;}
+
+/* ===========================================================================================
+slick slider
+=========================================================================================== */
+.slick-slider{display:block;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-touch-callout:none;-khtml-user-select:none;-ms-touch-action:pan-y;touch-action:pan-y;-webkit-tap-highlight-color:transparent}
+.slick-list{position:relative;display:block;overflow:hidden;margin:0;padding:0}
+.slick-list:focus{outline:0}
+.slick-list.dragging{cursor:pointer}
+.slick-slider .slick-list,.slick-slider .slick-track{-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-ms-transform:translate3d(0,0,0);-o-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+.slick-track{position:relative;top:0;left:0;display:block;margin-left:auto;margin-right:auto}
+.slick-track:after,.slick-track:before{display:table;content:''}
+.slick-track:after{clear:both}
+.slick-loading .slick-track{visibility:hidden}
+.slick-slide{display:none;float:left;height:auto; min-height:1px}
+[dir=rtl] .slick-slide{float:right}
+.slick-slide img{display:block;margin:0 auto}
+.slick-slide.slick-loading img{display:none}
+/*.slick-slide.dragging img{pointer-events:none}*/
+.slick-initialized .slick-slide{display:block}
+.slick-loading .slick-slide{visibility:hidden}
+.slick-vertical .slick-slide{display:block;height:auto}
+.slick-arrow.slick-hidden{display:none}
+
+
+// 슬릭 페이징
+.slick-dots{
+    display: inline-block; height: 1.1rem; margin-top: 2rem; text-align: center; vertical-align: top;
+
+    li {display: inline; height: 1.1rem;}
+    button {overflow: hidden; width: 1.1rem; height: 1.1rem;border-radius: 50%; margin: 0 0.5rem; padding-top: 0.3rem; border: .3rem solid #E5E5E5; background-color: #E5E5E5; transition: all 0.2s;}
+
+    // 활성화
+    .slick-active button {border: .3rem solid #4D4D4D; background-color: transparent;}
+
+    // 재생정지
+    & + .control 
+    {
+        display: inline-block; margin-top: 2rem; vertical-align: top;
+
+        button 
+        {
+            display: none; overflow: hidden; position: relative; top: -0.5rem; width: 2rem; height: 2rem; font-family: 'xeicon'; color: #222; text-align: center; line-height: 2rem;
+
+            &::before {display: block; content: '';}
+        }
+
+        // 정지
+        .stop::before {content: '';}
+
+        // 활성화 된 버튼만 보이기
+        .active {display: inline-block; vertical-align: top;}
+    }
+}
+
+// 슬릭 이전다음
+.slick-arrow 
+{
+    width: 7rem; height: 7rem;line-height: 7rem; overflow: hidden; position: absolute; left:4rem; top: 50%; transform: translateY(-50%); z-index: 8;  font-family: 'xeicon'; font-size: 3rem; text-align: center; border-radius: 50%; background-color: rgba(255,255,255,.5); color: rgba(51,51,51,.5); transition: all 0.2s;
+
+    &::before {display: block; content: '';}
+
+    // 다음
+    &.slick-next
+    {
+        right: 4rem; left: inherit;
+
+        &::before {content: '';}
+    }
+    &:hover,
+    &:focus{
+        background-color: rgba(255,255,255,.9); color: rgba(51,51,51,.9);
+    }
+}
+
+h2{font-size: 3rem; text-align: center; margin-bottom: 3rem;}
+
+
+// 부여군노인종합복지관
+#slick1{
+    padding-top: 5rem; padding-bottom: 5rem; position: relative; margin-bottom: 10rem;
+    
+    .section_wrap{@include width($width1); }  
+    .slide{width: 85.2rem; margin: 0 auto;}
+    .item{
+        margin: 0 3.2rem; padding-left: 59rem; 
+        a{
+            display: inline-block; width: 26.2rem; height: 26.2rem; border-radius: 1rem; transition: all .3s; position: relative;
+            &:hover
+            {
+                box-shadow: 3rem 3rem 3rem rgba(0,0,0,.1);
+                .txt_box .view{background-color: #4B82C2; transition: all .6s; }
+            }
+        }
+        
+        &.slick-current{
+            padding-left: 0; transition: all .3s;
+            a{
+                width: 85.2rem; height: 38.8rem;
+            }
+            .img_box{
+                width: 42.6rem; height: 38.8rem; transition: width .5s, height .5s;
+                &::before{background: linear-gradient(to right, rgba(0,0,0,.1) 0, rgba(255,255,255,0) 12%, rgba(255,255,255,0) 88%, rgba(0,0,0,.1) 100%);}
+                img{width: 100%;}
+                .divi,
+                .ti{display: none;}
+            }
+            .txt_box {
+                width: 42.6rem; height: 38.8rem;padding:6rem 5.4rem; opacity: 1; 
+                transition : width .7s ease-in-out .1s, height .2s ease-in .2s, opacity .3s ease-in .3s, padding-left .2s ease-in .2s;  
+                position: relative;
+                .divi{opacity: 1; transition: all .3s .3s;}
+                .ti{opacity: 1; transition: all 1s .6s;}
+                .desc{opacity: 1; transition: all 1.2s .8s;}
+                .view{opacity: 1; transition: opacity .6s .6s;}
+            }
+            & ~ .item {padding-left: 0rem;  }
+        }  
+        &.on{padding-left: 0; }  
+    }
+    
+    .img_box{
+        width: 26.2rem; height: 26.2rem; border-radius: 1rem; position: relative; overflow: hidden; float: left; 
+        &::before{content: ''; width: 100%; height: 100%; background-color: rgba(0,0,0,.3); position: absolute; left: 0; top: 0;}
+        .divi{position: absolute; left: 3rem; top: 3.6rem; color: rgba(255,255,255,.5);}
+        .ti{position: absolute; left: 3rem; top: 6rem; color: #fff; font-size: 2.6rem; font-weight: 700; line-height: 3.2rem; max-width: calc(100% - 6rem);}
+    }
+
+    .txt_box{
+        width: 0; padding:0; height: 0;border-radius: 1rem; float: left; background-image: url(../img/contents/busi_page.jpg);background-size: cover;background-repeat: no-repeat;
+        background-position: right; opacity: 0; position: absolute;left: 0; top: 0;
+        .divi{color: #4B82C2; font-weight: 500; margin-bottom: .7rem; opacity: 0;}
+        .ti{font-size: 3.1rem; font-weight: 700; color: #111; line-height: 3.6rem; margin-bottom:2.3rem ; opacity: 0;}
+        .desc{font-size:1.7rem ; color: #333; @include ellipsis2;  -webkit-line-clamp: 5; height: 12.8rem; margin-bottom: 2rem; opacity: 0;}
+        .view{background-color: #7D7D7D; color: #fff; text-align: center; height: 4rem; line-height: 4rem; font-weight: 500; opacity: 0;}
+    }
+
+    //.slide{transform: translateX(21.5rem);}
+    .slick-list{
+        overflow: visible; height: 40rem;
+    }   
+    .slick-dots{width: 100%; text-align: center; margin-top: 3rem;} 
+}
+
+@media (max-width: 900px){ 
+    #slick1 {
+        .slide{width: 60rem;}
+        .slick-list{height: 30rem;}
+        .item{
+            margin: 0 1.2rem; padding-left: 34rem;
+            a{height: 30rem;}
+            
+            &.slick-current {
+                a{ width: 60rem; height: 30rem;}
+                .img_box{width: 30rem; height: 30rem;}
+                .txt_box{
+                    width: 30rem; height: 30rem; padding: 3rem 3rem;
+                    .divi{margin-bottom: .2rem;}
+                    .ti{font-size: 2.7rem; margin-bottom: 1rem; letter-spacing: -0.25rem;}
+                    .desc{font-size: 1.5rem; height: 11rem; margin-bottom: 1.5rem;}
+                }    
+            }
+        }
+        .txt_box{
+            width: 30rem; height: 30rem; padding: 3rem 3rem;
+            .divi{margin-bottom: .2rem;}
+            .ti{font-size: 2.7rem; margin-bottom: 1rem; letter-spacing: -0.25rem;}
+            .desc{font-size: 1.5rem; height: 11rem; margin-bottom: 1.5rem;}
+
+        } 
+    }
+}
+@media (max-width: 600px){
+    #slick1 {
+        .slide{width: 30rem;}
+        .slick-list{height: 54rem;}
+        .item{
+            padding-left: 4rem;
+            &.slick-current{ 
+                a{width: 30rem;}
+                .txt_box{
+                    float: none;background: none; position: absolute; top: 30rem; padding: 2rem 0;
+                    .desc{height: auto;}
+                }
+            }
+        }
+        .slick-dots{display: none !important;}
+    }
+}
+
+
+// 임성희 작가
+.exhibition1{
+    position: relative; padding-left: 5rem; height: 75rem;
+    li{
+        padding-left: 11rem; padding-right: 4rem; padding-bottom: 10rem; margin-top: 12rem;
+        a{
+            display: inline-block; width: 25rem; border: 1px solid #ccc; transition: all .3s;
+            &:hover,
+            &:focus{
+                box-shadow: 3rem 3rem 3rem rgba(0,0,0,.1);
+            }
+        }
+        
+        &.slick-current{
+            margin-left: 0; margin-top: 0; padding-left: 0; padding-right: 0; position: relative;
+            &::before{content: ''; width: 14.4rem; height: 14.6rem;  background-image: url(../img/main/name.png); background-size: contain; position: absolute; right: -6.8rem; top: 20rem;animation: rotate 10s infinite linear;}
+            & ~ li {padding-left: 4rem; padding-right: 0;}
+            & + li {padding-left: 8rem; padding-right: 0;}
+            a{
+                width: 40rem; box-shadow: 4rem 5rem 4rem rgba(0,0,0,.1);
+                &:hover,
+                &:focus{
+                    box-shadow: 4rem 5rem 4rem rgba(0,0,0,.15);
+                }
+            }
+            .img_box{
+                height: 56rem;
+                img{width: 100%;}
+            }
+            .txt_box {
+                padding: 3rem;
+                .ti{font-size: 2rem; line-height: 3rem; height: 6rem; font-weight: 700;}
+                .date{font-size: 1.6rem;}
+            }
+        }        
+    }
+    
+    .img_box{
+        height: 35.4rem; border-bottom: 1px solid #ccc; display: flex; height: 35.2rem; justify-content: center; align-items: center; overflow: hidden;
+    }
+    .txt_box{
+        padding:1.8rem 2rem;
+        .ti{font-weight: 500;height: 4.8rem; color: #222222; margin-bottom: 1.3rem; @include ellipsis2; word-break: normal;}
+        .date{font-size: 1.4rem; color: #888888;}
+    }
+    .slick-list{
+        overflow: visible;
+        &::before{content: ''; width:200%; height: 100%; position: absolute; left: -200%; top: 0; background-color: #fff; z-index: 1;}
+    }
+    .slick-arrow{
+        position: absolute;z-index: 10;font-size: 0;width: 6.4rem;height: 6.4rem;line-height: 6.4rem;left: -7rem; border-radius: 1rem; -webkit-transition: all .3s;transition: all .3s;
+        &::before{content: '';  font-size:6.4rem; color: #222; transition: all .3s;}
+
+        &.slick-prev{
+            top: 21rem;
+            &:before{
+                content: '';
+            }
+        }
+        &.slick-next{
+            top: 28rem;
+            &:before{
+                content:'';
+            }
+        }
+        &:hover,
+        &:focus{
+            background-color: #222;
+            &:before{color: #fff;}
+        }
+    }
+}
+@keyframes rotate {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(-360deg)}
+}
+
+@media (max-width: 1600px){
+    .exhibition1 .slick-list{
+        overflow: hidden; width: calc(100% + 3rem);
+        &::before{display: none;}
+    }
+}
+@media (max-width: 1280px){
+    .exhibition1 .slick-arrow{left: -4rem;}
+}
+@media (max-width: 900px){
+    .exhibition1 .slick-arrow{left: -2rem;}       
+}
+@media (max-width: 768px){
+    .exhibition1 {
+        padding-left: 0;
+        .slick-arrow{display: none !important;}
+
+        li{
+            margin-top: 9rem;
+            
+            &.slick-current{
+                &::before{width: 8rem; height: 8rem; right: -3.8rem;}
+                & + li {padding-left: 5rem; }
+                a{ width: 36rem;}
+                .img_box{height: 50rem;}
+                .txt_box{
+                    padding: 2.5rem 2rem;
+                    .ti{margin-bottom: 3.5rem;}
+                }
+            }
+        }
+    }  
+}
+@media (max-width: 500px){
+    .exhibition1 {
+        li{
+            margin-top: 4rem;
+            
+            &.slick-current{
+                & + li {padding-left: 4rem; }
+                a{ width: 32rem;}
+                .img_box{height: 44rem;}
+            }
+        }
+    }
+}
+
+// 국토연구원
+#slick3{
+    position: relative; width: 100%; overflow: hidden; padding-bottom: 3rem; margin-bottom: 5rem;
+    .list{
+        width: calc(100% + 2.8rem); 
+        padding-bottom: 7.7rem; padding-top: 2.5rem;
+        //.item{margin-right: 3rem;}
+        .img_box{width: 100%; height: 24rem; border-radius: 1rem; overflow: hidden; margin-bottom: 1.8rem;}
+        .ti{font-size: 2rem; font-weight: 500; color: #333; text-align: center; @include ellipsis1; }
+    }
+    .slick-slide{margin-right: 3rem;}
+
+    // 슬릭 이전다음
+    .slick-arrow {
+        width: 4.7rem; height: 4.7rem;line-height: 4.5rem; overflow: hidden; position: absolute; left: inherit; right: 6.7rem; top: inherit; bottom: -1.5rem; transform: translateY(-50%); z-index: 8; font-family: 'xeicon'; font-size: 1.6rem; text-align: center; border-radius: 50%; border: 1px solid #ddd; color: #AAAAAA; transition: all 0.2s;
+
+        &::before {display: block; content: '';}
+
+        // 다음
+        &.slick-next
+        {
+            right: 0rem;
+
+            &::before {content: '';}
+        }
+        &:hover,
+        &:focus{
+           border: 1px solid #666666; color: #888;
+        }
+    }
+
+    .bar{
+       margin-right: 14rem; width: calc(100% - 14rem); height: 2px; background-color: #E2E2E2; position: relative;
+       .bar_current{height: 2px; position: absolute;left: 0; top: 0; background-color: #222222; transition: width .5s;}
+    }
+}
+
+#slick4{
+    position: relative; 
+    &::before{content: ''; width: 100%; height: 100%; position: absolute; top:0; left: 0; background: linear-gradient(180deg, #F0FAFD, #FFFFFF); z-index: -2;}
+    &::after{content: ''; width: 100%; height: 6rem; position: absolute; bottom: 0; left: 0; background: linear-gradient(to top, rgba(0,0,0,0.05), rgba(0,0,0,.0)); z-index: -1;}
+
+    
+    .section_wrap{
+        display: flex;
+        .publication{flex:1 0 20%; max-width: 20%; padding-top: 14.2rem;}
+        .list{flex:1 1 80%; max-width: 80%; overflow: hidden; padding: 14.2rem 8.5rem 22rem; max-height: 76rem;}
+    }
+    h2{font-size: 6rem; font-weight: 700; color: #222; line-height:1.22 ;}
+    
+
+    .slick-list{overflow: visible;}
+    .slick-slide{
+        //width: 27rem !important; 
+        & > div > div{
+            padding: 4.5rem 2.7rem 0; border: none;  vertical-align: top; 
+            &:nth-child(3n-1){padding: 0 2.7rem 4.5rem;}
+        }
+    }
+    .item{        
+        .img_box{
+            border-radius: 1rem;overflow: hidden; box-shadow: .4rem .8rem 1.8rem rgba(0,0,0,.12); margin-bottom: 1rem; border: 1px solid #E4E4E4;
+            img{margin: 0 auto; transition: all .3s;}
+        }
+        .ti{font-size: 1.6rem; font-weight: 700; color: #444; @include ellipsis1; display: inline-block; max-width: 100%;}
+        &:hover,
+        &:focus{
+            .img_box img{transform: scale(1.1);}
+        }
+    }
+
+    // 슬릭 이전다음
+    .slick-arrow {
+        width: 4.7rem; height: 4.7rem;line-height: 4.5rem; overflow: hidden; position: absolute; right: 0rem; left: inherit; top: calc(50% - 1rem); transform: translateY(-50%); z-index: 8; font-family: 'xeicon'; font-size: 1.6rem; text-align: center; border-radius: 50%; border: 1px solid #ddd; color: #AAAAAA; transition: all 0.2s;
+
+        &::before {display: block; content: '';}
+
+        // 다음
+        &.slick-next
+        {
+            top: calc(50% + 5rem);
+
+            &::before {content: '';}
+        }
+        &:hover,
+        &:focus{
+           border: 1px solid #666666; color: #888;
+        }
+    }
+    
+}

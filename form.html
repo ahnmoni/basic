@@ -1,0 +1,401 @@
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+  <meta name="title" content="대메뉴1 : 국문">
+  <meta name="description" content="국문,대메뉴1">
+  <meta name="keyword" content="국문">
+  <meta name="author" content="국문">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="국문">
+  <meta property="og:site_name" content="국문">
+  <meta property="og:description" content="국문">
+  <title>갤러리 리스트</title>
+  <!-- 공통 CSS -->
+  <link rel="stylesheet" href="css/basic.css">
+  <!-- 서브 CSS -->
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/contents.css">
+  <!-- 공통 JS -->
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <!-- 서브 JS -->
+  <script src="js/sub.js"></script>
+</head>
+
+<body>
+
+  <div id="wrap">
+    <div class="basicTabWrap">
+      <div class="content_view_tab">
+        <ul class="depth4">
+            <li><a href="table.html">테이블 </a></li>          
+            <li><a href="button.html">버튼</a></li>
+            <li><a href="image.html">이미지</a></li>          
+            <li class="on"><a href="form.html">폼</a></li>
+            <li><a href="tab.html">탭</a></li>
+            <li><a href="slick.html">slick</a></li>
+        </ul>
+      </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">Gallery List</h1>
+                    <div class="more_link_wrap">
+                        <a href="form.html" class="on">기본</a>
+                        <a href="form_2.html" >체크,라디오</a>
+                    </div>
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+                    <div class="table_wrap responsive form_type">
+                        <table>
+                            <caption>표내용 - 구분</caption>
+                            <colgroup>
+                                <col style="width:20%">
+                                <col style="width:80%">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <th scope="row"><span class="point1">*</span><span class="sr_only">필수입력</span> <label for="value1">제목</label></th>
+                                    <td>
+                                        <div class="form-row ">
+                                            <input type="text" class="form-control" id="value1" title="제목" placeholder="제목을 입력하세요.">
+                                        </div>
+                                        <!--<input class="form_textbox" type="text" name="title" id="title" value="" maxlength="100" title="제목을 입력하세요" placeholder="제목을 입력하세요.">-->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="value2">작성자</label></th>
+                                    <td>
+                                        <div class="form-inline ">
+                                            <input type="text" class="form-control " id="value2" readonly="readonly" value="관리자" title="작성자">
+                                        </div>
+                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="point1">*</span><span class="sr_only">필수입력</span> <label for="value3">비밀번호</label></th>
+                                    <td>
+                                        <div class="form-inline ">
+                                            <input type="password" class="form-control" id="value3" title="비밀번호" placeholder="비밀번호를 입력하세요.">
+                                        </div>
+                                        <div class="icon_info mt10">비밀번호는 8자리 이상의 영문, 특수문자, 숫자를 모두 사용해야 합니다.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="radioY">동의/비동의</label></th>
+                                    <td>
+                                        <div class="form-row ">
+                                            <span class="custom-input"><input type="radio" name="radio1" id="radioY"><label for="radioY">동의</label></span>
+                                            <span class="custom-input"><input type="radio" name="radio1" id="radioN"><label for="radioN">비동의</label></span>
+                                        </div>
+                                    </td>
+                                </tr> 
+                                <tr>
+                                    <th scope="row"><label for="value4">비공개</label></th>
+                                    <td>
+                                        <div class="form-row">
+                                            <span class="custom-input"><input type="checkbox" id="value4"><label for="value4">비공개</label></span>
+                                        </div>
+                                    </td>
+                                </tr>  
+                                <tr>
+                                    <th scope="row"><label for="tel_1">연락처</label></th>
+                                    <td>
+                                        <div class="form-line ">
+                                            <select name="tel_1" id="tel_1" title="연락처 첫째자리를 선택하세요." class="form-select">
+                                                <option value="02">02</option>
+                                                <option value="031">031</option>
+                                                <option value="032">032</option>
+                                                <option value="033">033</option>
+                                                <option value="041">041</option>
+                                                <option value="042">042</option>
+                                                <option value="043">043</option>
+                                                <option value="051">051</option>
+                                                <option value="052">052</option>
+                                                <option value="053">053</option>
+                                                <option value="054">054</option>
+                                                <option value="055">055</option>
+                                                <option value="061">061</option>
+                                                <option value="062">062</option>
+                                                <option value="063">063</option>
+                                                <option value="064">064</option>
+                                                <option value="070">070</option>
+                                                <option value="080">080</option>                                            
+                                            </select>
+                                            - <input type="text" name="tel_2" id="tel_2" class="form-control" maxlength="4" value="" title="연락처 가운데자리를 입력하세요." style="width:8rem">
+                                            - <input type="text" name="tel_3" id="tel_3" class="form-control" maxlength="4" value="" title="연락처 끝자리를 입력하세요." style="width:8rem">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="hp_1">휴대전화</label></th>
+                                    <td>
+                                        <div class="form-line ">
+                                            <select name="hp_1" id="hp_1" title="휴대번호 첫째자리를 선택하세요." class="form-select">
+                                                <option value="010" selected="selected">010</option>
+                                                <option value="010">011</option>
+                                                <option value="010">016</option>
+                                                <option value="010">017</option>
+                                                <option value="010">018</option>
+                                                <option value="010">019</option>
+                                            </select>
+                                            - <input type="text" name="hp_2" id="hp_2" class="form-control" maxlength="4" value="" title="휴대전화번호 가운데자리를 입력하세요." style="width:8rem">
+                                            - <input type="text" name="hp_3" id="hp_3" class="form-control" maxlength="4" value="" title="휴대전화번호 끝자리를 입력하세요." style="width:8rem">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="email_1">이메일</label></th>
+                                    <td>
+                                        <div class="form-line ">
+                                            <input type="text" name="email_1" id="email_1"   title="이메일 주소를 입력하세요." class="form-control"> @
+                                            <input type="text" name="email_2" id="email_2" disabled value="naver.com" title="이메일 도메인을 입력하세요." class="form-control">
+                                            <select  name="email_code" id="email_code" title="이메일 도메인을 선택하세요" class="form-select">
+                                                <option value="1">직접입력</option>
+                                                <option value="naver.com" selected>naver.com</option>
+                                                <option value="hanmail.net">hanmail.net</option>
+                                                <option value="hotmail.com">hotmail.com</option>
+                                                <option value="nate.com">nate.com</option>
+                                                <option value="yahoo.co.kr">yahoo.co.kr</option>
+                                                <option value="empas.com">empas.com</option>
+                                                <option value="dreamwiz.com">dreamwiz.com</option>
+                                                <option value="freechal.com">freechal.com</option>
+                                                <option value="lycos.co.kr">lycos.co.kr</option>
+                                                <option value="korea.com">korea.com</option>
+                                                <option value="gmail.com">gmail.com</option>
+                                                <option value="hanmir.com">hanmir.com</option>
+                                                <option value="paran.com">paran.com</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="book_nm">희망도서명</label></th>
+                                    <td>
+                                        <div class="form-row ">
+                                            <input type="text" class="form-control mr10" id="book_nm" name="book_nm" title="희망도서명을 입력하세요.">
+                                            <div class="btn_box">
+                                                <a class="btn_basic type2 small" href="javascript:void(0);">검색</a>
+                                            </div>                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><label for="value5">내용</label></th>
+                                    <td>
+                                        <div class="form-row ">
+                                            <textarea name="content" id="value5" cols="50" rows="10" title="내용" placeholder="내용을 입력하세요." class="form-control" ></textarea>
+                                        </div>                                        
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="point1">*</span><span class="sr_only">필수입력</span> <label for="value_code">분류</label></th>
+                                    <td>
+                                        <div class="form-inline">
+                                            <input type="text" class="form-control mr10" id="value_code" name="value_code">
+                                            <select class="form-select">
+                                                <option value="">선택1</option>
+                                                <option value="">선택2</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row"><span class="point1">*</span><span class="sr_only">필수입력</span> <label for="pay_way">납부방법</label></th>
+                                    <td>
+                                        <div class="form-inline">
+                                            <select name="pay_way" id="pay_way" title="납부방법을 선택하세요." class="form-select mr20">
+                                                <option value="" >납부방법</option>
+                                                <option value="" selected>무통장입금</option>
+                                                <option value="">CMS 자동이체</option>
+                                            </select>                               
+
+                                            <label for="" class="form-label">입금자</label>
+                                            <input type="text" class="form-control ">                                         
+                                            
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="spon_sum1">후원금액</label></th>
+                                    <td>                                        
+                                        <div class="form-row " style="align-items: center;">
+                                            <span class="custom-input"><input type="radio" name="spon_sum" id="spon_sum1" value="1" ><label for="spon_sum1">10,000원</label></span>
+                                            <span class="custom-input"><input type="radio" name="spon_sum" id="spon_sum2" value="1" ><label for="spon_sum2">20,000원</label></span>
+                                            <span class="custom-input"><input type="radio" name="spon_sum" id="spon_sum3" value="1" ><label for="spon_sum3">30,000원</label></span>
+                                            <span class="custom-input"><input type="radio" name="spon_sum" id="spon_sum4" value="1" ><label for="spon_sum4">40,000원</label></span>
+                                            <span class="custom-input"><input type="radio" name="spon_sum" id="spon_sum5" value="1" ><label for="spon_sum5">50,000원</label></span>
+                                            <span class="custom-input"><input type="radio" name="spon_sum" id="spon_sum6" value="1" ><label for="spon_sum6">직접입력</label></span>    
+                                            <input type="text" id="spon_sum_ect" name="spon_sum_ect" value="" disabled="disabled">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="spon_sum1">납부일</label></th>
+                                    <td>
+                                        <!-- datepicker -->
+                                        <!-- jquery ui CSS -->
+                                        <link rel="stylesheet" href="js/ui.core.css">
+                                        <!-- jquery ui JS -->
+                                        <script src="js/jquery-ui.min.js"></script>
+                                        <script>
+                                            $(function () {
+                                                $.datepicker.setDefaults({
+                                                    monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+                                                    dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+                                                    dateFormat: 'yy/mm/dd',
+                                                    showMonthAfterYear: true,
+                                                    changeYear: true,
+                                                    changeMonth: true,
+                                                    yearRange: "c-100:c+10",
+                                                    showOn: 'both'
+                                                });
+                                                $("#sdate").datepicker({
+                                                    buttonText: '<i class="icon_calendar" title="시작일"></i>'
+                                                });
+                                                $("#edate").datepicker({
+                                                    buttonText: '<i class="icon_calendar" title="종료일"></i>'
+                                                });
+                                            });
+                                        </script>
+                                        <div class="form-inline">
+                                            <input type="text" name="sdate" id="sdate" value="2019/04/02" maxlength="10" title="시작일을 입력하세요."
+                                                class="form-control input_date">
+                                            <span class="form-term"> - </span>
+                                            <input type="text" name="edate" id="edate" value="2019/04/02" maxlength="10" title="종료일을 입력하세요."
+                                                class="form-control input_date">
+                                        </div>
+                                        <!-- //datepicker -->
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="year">생년월일</label></th>
+                                    <td>
+                                        <script>
+                                            $(document).ready(function(){            
+                                                var now = new Date();
+                                                var year = now.getFullYear();
+                                                var mon = (now.getMonth() + 1) > 9 ? ''+(now.getMonth() + 1) : '0'+(now.getMonth() + 1); 
+                                                var day = (now.getDate()) > 9 ? ''+(now.getDate()) : '0'+(now.getDate());           
+                                                //년도 selectbox만들기               
+                                                for(var i = 1930 ; i <= year ; i++) {
+                                                    $('#year').append('<option value="' + i + '">' + i + '</option>');    
+                                                }
+                                        
+                                                // 월별 selectbox 만들기            
+                                                for(var i=1; i <= 12; i++) {
+                                                    var mm = i > 9 ? i : "0"+i ;            
+                                                    $('#month').append('<option value="' + mm + '">' + mm + '</option>');    
+                                                }
+                                                
+                                                // 일별 selectbox 만들기
+                                                for(var i=1; i <= 31; i++) {
+                                                    var dd = i > 9 ? i : "0"+i ;            
+                                                    $('#day').append('<option value="' + dd + '">' + dd+ '</option>');    
+                                                }
+                                                $("#year  > option[value="+year+"]").attr("selected", "true");        
+                                                $("#month  > option[value="+mon+"]").attr("selected", "true");    
+                                                $("#day  > option[value="+day+"]").attr("selected", "true");       
+                                            
+                                            })
+                                        </script>
+                                        <span class="form_select number ">
+                                            <select name="yy" id="year"></select>
+                                        </span>
+                                        <span style="line-height:4rem; display: inline-block; vertical-align: top;">년</span>
+                                        <span class="form_select number ml10">
+                                            <select name="mm" id="month"></select>
+                                        </span>
+                                        <span style="line-height:4rem;display: inline-block; vertical-align: top;">월</span>
+                                        <span class="form_select number ml10">
+                                            <select name="dd" id="day"></select>
+                                        </span>
+                                        <span style="line-height:4rem;display: inline-block; vertical-align: top;">일</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th><label for="address"><span class="point1" title="필수 입력 정보">*</span> 주소 </label></th>
+                                    <td>
+                                        <!--autoload=false 파라미터를 이용하여 자동으로 로딩되는 것을 막습니다.-->
+                                        <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js?autoload=false"></script>
+
+                                        <script>
+                                            /** 우편번호 찾기 */
+                                            function execDaumPostcode() {
+                                                daum.postcode.load(function(){
+                                                    new daum.Postcode({
+                                                        oncomplete: function(data) {
+                                                        // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분입니다.
+                                                        $("#postcode").val(data.zonecode);
+                                                        $("#address").val(data.roadAddress);
+                                                        }
+                                                    }).open();
+                                                });
+                                            }
+                                        </script>
+                                        <div class="form-row  mb05">
+                                            <input type="text" class="form-control mr10" name="postcode" id="postcode" placeholder="우편번호" readonly style="max-width:20rem"/>                    
+                                            <button type="button" class="btn_basic type2 small" onclick="execDaumPostcode()">우편번호 찾기</button>
+                                        </div>
+                                        <div class="form-row  mb05">
+                                            <input type="text" class="form-control " name="address" id="address" placeholder="도로명 주소" readonly />
+                                        </div>
+                                        <div  class="form-row">
+                                            <input type="text" class="form-control " name="detailAddress" placeholder="상세 주소" required />
+                                        </div>
+                                    </td>
+                                </tr>
+								<tr class="file active">
+									<th scope="row">첨부파일</th>
+									<td>
+										<img src="./img/board/pdf.png" alt="첨부파일"><!--파일명--> 테스트test1234.pdf
+										<a href="" class="btn_del"> [파일삭제]</a>
+									</td>
+								</tr>
+								<tr class="file">
+									<th scope="row"><label for="filename0">첨부파일</label></th>
+									<td>
+										<span class="form_file_">
+											<input class="file" type="file" name="filename0" id="filename0" title="첨부파일0">
+											<span class="txt">hwp,xls,doc,ppt,pdf,zip,jpg,gif,png 파일만, 5MB까지 업로드가 가능합니다.</span>
+										</span>
+									</td>
+                                </tr>
+                                <tr>
+									<th scope="row"><label for="filename0">첨부파일</label></th>
+									<td>
+										<div class="form_file">
+                                            <label for="file6_4" class="file_label">파일검색</label> 
+                                            <input type="file" id="file6_4" >
+                                            <input class="upload-name" value=""  disabled>
+                                        </div>
+									</td>
+								</tr>
+								
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- // -->
+                </div>
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+
+    </section>
+    <!-- #container -->
+
+    <footer>
+    </footer>
+</div>
+</body>
+</html>

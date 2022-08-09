@@ -1,0 +1,212 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,user-scalable=yes">
+<meta name="title" content="대메뉴1 : 국문">
+<meta name="description" content="국문,대메뉴1">
+<meta name="keyword" content="국문">
+<meta name="author" content="국문">
+<meta property="og:type" content="website">
+<meta property="og:title" content="국문">
+<meta property="og:site_name" content="국문">
+<meta property="og:description" content="국문">
+<title>게시판 쓰기화면</title>
+<!-- 공통 CSS -->
+<link rel="stylesheet" href="css/basic.css">
+<!-- 서브 CSS -->
+<link rel="stylesheet" href="css/sub.css">
+<link rel="stylesheet" href="css/contents.css">
+<!-- 공통 JS -->
+<script src="js/jquery-2.2.4.min.js"></script>
+<!-- 서브 JS -->
+<script src="js/sub.js"></script>
+</head>
+<body>
+<div id="wrap">
+    <div class="basicTabWrap">
+        <div class="content_view_tab">
+            <ul class="depth4">
+                <li><a href="table.html">테이블 </a></li>          
+                <li><a href="button.html">버튼</a></li>
+                <li><a href="image.html">이미지</a></li>          
+                <li class="on"><a href="form.html">폼</a></li>
+				<li><a href="tab.html">탭</a></li>
+                <li><a href="slick.html">slick</a></li>
+            </ul>
+        </div>
+    </div>
+    <section id="container">
+        <div id="contentWrap">
+
+            <section id="content">
+                <section class="content_info">
+                    <h1 class="title">Table Write</h1>
+                    <div class="more_link_wrap">
+                        <a href="form.html" >기본</a>
+                        <a href="form_2.html" class="on">체크,라디오</a>
+                    </div>
+                </section>
+
+                <div id="contents_body">
+                    <!-- 컨텐츠 영역 -->
+                    <h2 class="title2 mb20">라디오</h2>
+
+                    <span class="form_radio">
+                        <input type="radio" name="open_yn" id="open_ynY" value="Y" checked="checked"> <label for="open_ynY">공개</label>
+                    </span>                                                
+                    <span class="form_radio">
+                        <input type="radio" name="open_yn" id="open_ynN" value="N"> <label for="open_ynN">비공개</label>
+                    </span>
+
+                    <br><br>
+
+                    <div class="radiobox ">
+                        <p class="radios">
+                            <input type="radio" name="present" id="present1" value="Y">
+                            <label for="present1">유튜버 사나고 3D펜 (3D펜 + 필라멘트 20색 세트)</label>
+                        </p>
+                        <p class="radios">
+                            <input type="radio" name="present" id="present2" value="N">
+                            <label for="present2">시마 Z드론</label>
+                        </p>
+                        <p class="radios">
+                            <input type="radio" name="present" id="present3" value="N">
+                            <label for="present3">과학상자 3호 코딩팩 step1 기준</label>
+                        </p>
+                    </div>
+
+                    <br><br>
+
+                    <div class="form-row mb30">
+                        <span class="custom-input"><input type="radio" name="radio1" id="radioY"><label for="radioY">동의</label></span>
+                        <span class="custom-input"><input type="radio" name="radio1" id="radioN"><label for="radioN">비동의</label></span>
+                    </div>
+                    
+
+
+                    <h2 class="title2 mb20">체크박스</h2>
+
+                    <span class="form_check">
+                        <input type="checkbox" name="date_a" id="date_a1" value="Y" checked="checked"> 
+                        <label for="date_a1">공개</label>
+                    </span>                                                
+                    <span class="form_check">
+                        <input type="checkbox" name="date_a" id="date_a2" value="N"> 
+                        <label for="date_a2">비공개</label>
+                    </span>
+
+                    <br><br>
+
+                    <input type="checkbox" name="password_check" id="password_check1" value="" class="checkbox_i"> 
+                    <label for="password_check1" class="checkbox_l">비밀글 설정 체크</label>
+                    <input type="checkbox" name="password_check" id="password_check2" value="" class="checkbox_i"> 
+                    <label for="password_check2" class="checkbox_l">비밀글 설정 체크</label>
+
+                    <br><br>
+
+                    <div class="form-row mb10">
+						<span class="custom-input"><input type="checkbox" id="allCheck"><label for="allCheck">전체동의</label></span>
+                    </div>
+                    
+                    <br>
+                    <label class="check_eff1 mb30">
+                        <input checked="" type="checkbox">
+                        <span>체크박스 선택</span>
+                    </label>
+
+                    <div class="sch_checkbox mb50">
+                        <span class="btn_check"><input type="checkbox" name ="searchTotal_navi" id="searchTotal_navi"><label for="searchTotal_navi">전체</label></span>
+                        <span class="btn_check"><input type="checkbox" name ="searchTitle_navi" id="searchTitle_navi"><label for="searchTitle_navi">제목</label></span>
+                        <span class="btn_check"><input type="checkbox" name ="searchContents_navi" id="searchContents_navi"><label for="searchContents_navi">본문</label></span>
+                        <span class="btn_check"><input type="checkbox" name ="searchFile_navi" id="searchFile_navi"><label for="searchFile_navi">첨부파일</label></span>
+                    </div>
+
+                    <h2 class="title2 mb20">체크박스 전체</h2>
+                    <div class="program_list mb50">
+                        <ul>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_all" name="lecturer_all" value="">                            
+                                    <label for="lecturer_all" >전체</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_1" name="lecturer" value="">                            
+                                    <label for="lecturer_1" >수영</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_2" name="lecturer" value="">                            
+                                    <label for="lecturer_2" >88댄스</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_3" name="lecturer" value="">                            
+                                    <label for="lecturer_3" >TRX서스펜션</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_4" name="lecturer" value="">                            
+                                    <label for="lecturer_4" >가요교실</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_5" name="lecturer" value="">                            
+                                    <label for="lecturer_5" >라인댄스</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_6" name="lecturer" value="">                            
+                                    <label for="lecturer_6" >러닝크루</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_7" name="lecturer" value="">                            
+                                    <label for="lecturer_7" >바디체인지</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_8" name="lecturer" value="">                            
+                                    <label for="lecturer_8" >바디퍼스널</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_9" name="lecturer" value="">                            
+                                    <label for="lecturer_9" >발레핏</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="custom-input">
+                                    <input type="checkbox" id="lecturer_10" name="lecturer" value="">                            
+                                    <label for="lecturer_10" >벨리댄스</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                   
+
+                    <!-- // -->                    
+                </div>
+                        
+            </section>
+            <!--// #content -->
+
+        </div>
+        <!--// #contentWrap -->
+
+    </section>
+    <!-- #container -->
+
+</div>
+</body>
+</html>
